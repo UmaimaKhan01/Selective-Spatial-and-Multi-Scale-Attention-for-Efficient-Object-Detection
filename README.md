@@ -33,7 +33,7 @@ We modify Faster R-CNN with learned spatial gates inserted after the FPN, traine
 ## Setup
 
 ```bash
-git clone https://github.com/<your-repo>/selective-fpn
+git clone [https://github.com/<your-repo>/selective-fpn](https://github.com/UmaimaKhan01/Selective-Spatial-and-Multi-Scale-Attention-for-Efficient-Object-Detection
 cd selective-fpn
 conda activate gpu_env_evc7
 pip install torch torchvision pycocotools fvcore
