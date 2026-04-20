@@ -6,7 +6,7 @@
 
 ## Overview
 
-We modify Faster R-CNN with learned spatial gates inserted after the FPN, trained jointly with a sparsity regularization term. The key finding: spatial gating **increases FLOPs by +6% yet achieves 2× wall-clock speedup** by suppressing ~51% of feature map values, reducing GPU memory-bandwidth pressure — a bottleneck missed by standard FLOPs analysis.
+We modify Faster R-CNN with learned spatial gates inserted after the FPN, trained jointly with a sparsity regularization term. The key finding: spatial gating **increases FLOPs by +6% yet achieves 2× wall-clock speedup** by suppressing ~51% of feature map values, reducing GPU memory-bandwidth pressure, a bottleneck missed by standard FLOPs analysis.
 
 ---
 
@@ -24,9 +24,9 @@ We modify Faster R-CNN with learned spatial gates inserted after the FPN, traine
 
 ## Key Findings
 
-1. **FLOPs ≠ latency** — spatial gating adds gate convolution overhead (+6% FLOPs) but halves wall-clock time via memory-bandwidth reduction
-2. **Gradient domination** — fine-tuning from pretrained weights prevents sparsity regularization from closing gates regardless of λ ∈ {1e-5, 1e-4, 1e-3}
-3. **Scale gating is ineffective** — scalar FPN-level weights do not change memory access patterns and provide no speedup
+1. **FLOPs ≠ latency**: spatial gating adds gate convolution overhead (+6% FLOPs) but halves wall-clock time via memory-bandwidth reduction
+2. **Gradient domination**: fine-tuning from pretrained weights prevents sparsity regularization from closing gates regardless of λ ∈ {1e-5, 1e-4, 1e-3}
+3. **Scale gating is ineffective**: scalar FPN-level weights do not change memory access patterns and provide no speedup
 
 ---
 
