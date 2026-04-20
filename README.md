@@ -1,7 +1,6 @@
 # SelectiveFPN-FasterRCNN
 
 **Selective Spatial and Multi-Scale Attention for Efficient Object Detection**  
-Umaima Khan, Karthika Ramasamy — University of Central Florida
 
 ---
 
